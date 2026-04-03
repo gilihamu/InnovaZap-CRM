@@ -1,30 +1,42 @@
 {
+  "3f9b4f0e-6d2d-4d29-b374-866bb6555582": {
+    "token": "pcp_cd2ab48dd2853f8ff89e3c909bc3df34b992bc77d5ffe36e",
+    "name": "CEO - Optino Arbitrage"
+  },
+  "3aeae66b-9380-402d-a0e1-4be46c42c198": {
+    "token": "pcp_ecf10be4c2d68b175b1e1ad86e3957b1f7703dc6c6f9cb69",
+    "name": "CTO - Optino Arbitrage"
+  },
+  "c2dc2288-9bac-4f01-b317-72a087749962": {
+    "token": "pcp_4a7fb6b776e992f36b82aa7e466f3e7eea594a94c98b361c",
+    "name": "Exchange - Optino Arbitrage"
+  },
   "159bcbbd-a1f5-4ef0-8956-268ff4c57363": {
     "token": "pcp_793ca1d26946191301a50c40153e4cf66a9354851b39644b",
-    "name": "CTO - Tech Lead"
+    "name": "CTO - InnovaZap"
   },
   "141e6fcc-ca3c-42c0-ba6b-cb56a0becbf7": {
     "token": "pcp_94b1f408ae113aa5fc283c66cf52b98e706d2f20f204b41b",
-    "name": "Backend Gateway Engineer"
+    "name": "Backend Gateway - InnovaZap"
   },
   "13a36d77-62d2-488d-9107-0cbacdacea66": {
     "token": "pcp_e7fbda18262035358c31cf3daf9acbe950867632bc919ddb",
-    "name": "CRM Service Engineer"
+    "name": "CRM Service - InnovaZap"
   },
   "065bd460-66b3-4868-820b-cc171d74b042": {
     "token": "pcp_5e2a050200cc92265fed57ac496742da6a0bbd5cb70e7bd7",
-    "name": "Messaging & WhatsApp Engineer"
+    "name": "Messaging - InnovaZap"
   },
   "1aa327df-cde1-4885-9a1b-dcea1a4eb74b": {
     "token": "pcp_989d41aa2d64d496b3c06a2502a7f5ec5b089754646232b6",
-    "name": "Chatbot Engine Engineer"
+    "name": "Chatbot - InnovaZap"
   },
   "c79f5342-4e1c-4a62-8128-0ad68802117e": {
     "token": "pcp_01ef4b7bf7f5fa7abca1aa404a255cfef9cd9e71aa4af458",
-    "name": "Frontend React Engineer"
+    "name": "Frontend - InnovaZap"
   },
   "87f13b0e-4287-4145-ac49-20ccd4e7d945": {
     "token": "pcp_4734e0b1a9eb2cb24d15db18eecefebd3669a45cbd44c165",
-    "name": "DevOps & Infrastructure"
+    "name": "DevOps - InnovaZap"
   }
 }
