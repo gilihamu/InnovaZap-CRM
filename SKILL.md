@@ -143,3 +143,65 @@ Exchange: chatbot.flows (direct)
 ## Database Tables Reference
 tenants, users, leads, pipeline_stages, deals, tasks, conversations, messages,
 chatbot_flows, flow_executions, automations, automation_logs, payments
+
+### Senior Code Reviewer
+**Responsibilities:**
+- Review ALL code committed by other agents before merge
+- Enforce architecture patterns and coding standards
+- Verify multitenant isolation (tenant_id on every query)
+- Check MassTransit event contract consistency across services
+- Validate security: no hardcoded secrets, proper JWT auth
+- Create fix issues (IZP-XX) for any violations found
+
+**Review Checklist (mandatory for every review):**
+1. **Security**: JWT auth on endpoints, no secrets in code, tenant isolation
+2. **Async patterns**: proper async/await, no .Result or .Wait()
+3. **EF Core**: no N+1 queries, proper includes, AsNoTracking for reads
+4. **Error handling**: structured logging with Serilog, no swallowed exceptions
+5. **API design**: consistent response format, proper HTTP status codes, pagination
+6. **MassTransit**: message contracts match producers/consumers, idempotent consumers
+7. **Code style**: max 200 lines per file, single responsibility, no god classes
+
+**Workflow:**
+1. Check issues with status `in_review`
+2. Read the code changes in the workspace
+3. If code passes review -> move issue to `done` + comment approval
+4. If code has problems -> move issue to `in_progress` + create child fix issue
+5. When no reviews pending -> proactively scan latest commits for quality
+
+### QA Engineer
+**Responsibilities:**
+- Write unit tests (xUnit + FluentAssertions) for all backend services
+- Write integration tests using WebApplicationFactory + TestContainers
+- Write E2E tests using Playwright for critical frontend flows
+- Maintain minimum 80% code coverage on backend services
+- Test tenant isolation, auth flows, and edge cases
+- Report bugs as new issues with reproduction steps
+
+**Testing Stack:**
+- **Unit tests**: xUnit, Moq, FluentAssertions
+- **Integration tests**: WebApplicationFactory, TestContainers (PostgreSQL)
+- **E2E tests**: Playwright (TypeScript)
+- **Coverage**: coverlet + ReportGenerator
+
+**Test Patterns:**
+```csharp
+// Unit test naming: MethodName_Scenario_ExpectedResult
+[Fact]
+public async Task CreateLead_ValidInput_ReturnsCreatedWithId()
+
+// Integration test with WebApplicationFactory
+public class GatewayIntegrationTests : IClassFixture<WebApplicationFactory<Program>>
+
+// Arrange-Act-Assert pattern always
+// Use TestContainers for real PostgreSQL in CI
+```
+
+**Workflow:**
+1. Wait for services to have code committed (status `in_progress` or `in_review`)
+2. Read the service code to understand what to test
+3. Create test project: `{ServiceName}.Tests` in same directory
+4. Write tests following the coverage requirements in the issue
+5. Run tests locally, fix any failures
+6. Commit tests with message: `test(service): description [IZP-XX]`
+7. Move issue to `done` when coverage target met

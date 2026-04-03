@@ -50,6 +50,16 @@
       "agentId": "87f13b0e-4287-4145-ac49-20ccd4e7d945",
       "token": "pcp_4734e0b1a9eb2cb24d15db18eecefebd3669a45cbd44c165",
       "name": "DevOps - InnovaZap"
+    },
+    {
+      "agentId": "dfe865fb-73bf-4d04-ab75-b8d519aff9c0",
+      "token": "pcp_a1adf5ef03a8bb99d53712081384a2b1c70864b1cf90ceae",
+      "name": "Senior Code Reviewer"
+    },
+    {
+      "agentId": "38868b87-f3b0-4e44-b6fa-927d6af9d64c",
+      "token": "pcp_a486c147ed374c5d297ee781bac4068f833f46dc7c160467",
+      "name": "QA Engineer"
     }
   ]
 }
