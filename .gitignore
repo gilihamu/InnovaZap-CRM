@@ -1,0 +1,16 @@
+[Bb]in/
+[Oo]bj/
+.vs/
+*.user
+*.suo
+node_modules/
+.next/
+dist/
+out/
+appsettings.Development.json
+appsettings.*.json
+!appsettings.json
+*.env
+*.env.local
+.DS_Store
+.idea/
